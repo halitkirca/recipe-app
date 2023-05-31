@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FormContainer, Header, LoginContainer, StyledButton, StyledForm, StyledImg, StyledInput } from './LoginStyles'
 import mealSvg from "../../assets/meal.svg"
 import { useNavigate } from 'react-router-dom'
