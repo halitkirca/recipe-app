@@ -7,15 +7,16 @@ const RecipeCard = ({foodlist}) => {
   return (
     <div>
       <MainContainer>
-    {foodlist.map(({recipe}, id) => {console.log(recipe);
+    {foodlist.map((i, id) => {
       return (
-        
         <Cards key={id}>
-          <RecipeHeader>{recipe.label}</RecipeHeader>
-          <RecipeImage src={recipe.image}/>
-          <Button onClick={() => navigate(`/details`)}>Details</Button>
+          <RecipeHeader>{i.recipe.label}</RecipeHeader>
+          <RecipeImage src={i.recipe.image} />
+          <Button onClick={() => navigate("/details", { state: { i } })}>
+            Details
+          </Button>
         </Cards>
-      )}
+      );}
     ) }
       </MainContainer> 
     </div>
